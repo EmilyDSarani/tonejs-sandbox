@@ -1,6 +1,6 @@
 // import style from'./App.css';
 // import * as Tone from "tone";
-import { playAb4, playC4, playD4, playE4, playF4, playG4 } from "./views/Keys"
+import { playAb4, playC4, playD4, playE4, playF4, playG4, playBb4, playC5, playGb4, playB4, playDb4 } from "./views/Keys"
 // import playNote  from "./views/Keyboard";
 
 // function playC4(){
@@ -20,30 +20,39 @@ import { playAb4, playC4, playD4, playE4, playF4, playG4 } from "./views/Keys"
 function App() {
 
  function handleKeyPress(event){
-    //A
-    if (event.key === 'A' ) {
+    if (event.key === 'A') {
       playC4();
       }
-    //S
-      if (event.key === 'S' ) {
+      if (event.key === 'S') {
       playD4();
       }
-    //D
     if (event.key === 'D' ) {
       playAb4();
-      } 
-    //F   
+      }    
     if (event.key === 'F' ) {
       playF4();
       }
-    //C
     if (event.key === 'G' ) {
       playE4();
       }
-    //T
     if (event.key === 'H' ) {
       playG4();
+      }   
+    if (event.key === 'K' ) {
+      playB4();
+      }  
+    if (event.key === 'T' ) {
+      playGb4();
       }      
+    if (event.key === 'J' ) {
+      playBb4();
+      } 
+    if (event.key === 'E' ) {
+      playDb4();
+      }  
+    if (event.key === 'W') {
+      playC5();
+      }          
   }
 
 
@@ -80,7 +89,13 @@ function App() {
   // <button onClick={playD4}>Play D4</button>
   // <button onClick={playE4}>Play E4</button>
 <div>
-<input type="text" onKeyPress={handleKeyPress} />
+ <fieldset>
+    <legend> DUN DUN DUUUUN </legend>
+      <label> Oodaley Odalaley </label> 
+      <input type="text" onKeyPress={handleKeyPress} />
+      <label> Golley, what a day </label>
+      <input type="password" onKeyPress={handleKeyPress} />
+</fieldset> 
 </div>
   );
 }
