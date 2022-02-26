@@ -25,7 +25,6 @@ export function playC4(){
     synth.triggerAttackRelease("Ab4", "8n");
   }
   
-
   export function  playB4(){
     const synth = new Tone.Synth().toDestination();
     synth.triggerAttackRelease("B4", "8n");
